@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"/>
+  <meta content=yes name=apple-mobile-web-app-capable/>
+  <meta content=yes name=apple-touch-fullscreen/>
+  <meta content="telephone=no,email=no" name=format-detection/>
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="_navigation_color" content="#108ee9"/>
+  <title>Mobile App</title>
+  <% if (process.env.NODE_ENV == 'development') { %>
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link href="/iconfont/iconfont.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script crossorigin src="/js/react.js"></script>
+    <script crossorigin src="/js/react-dom.js"></script>
+  <% } %>
+  <% if (process.env.NODE_ENV == 'production') { %>
+    <link rel="icon" href="/crm-app/static/favicon.png" type="image/x-icon">
+    <link href="/crm-app/static/iconfont/iconfont.css" rel="stylesheet"/>
+    <script type="text/javascript" src="/crm-app/static/js/jquery.js"></script>
+    <script crossorigin src="/crm-app/static/js/react.js"></script>
+    <script crossorigin src="/crm-app/static/js/react-dom.js"></script>
+  <% } %>
+  <script src="applocal://www/cordova.min.js"></script>
+</head>
+
+<body>
+<div id="root"></div>
+</body>
+
+</html>
